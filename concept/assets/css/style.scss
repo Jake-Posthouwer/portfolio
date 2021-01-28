@@ -1,21 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
+
+$basecolor1: #bdc3c7;
+$basecolor2: #ecf0f1;
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #30336b;
+    background-color: $basecolor1;
+    font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 header {
-    width: 100vw;
-    height: 100px;
-    background-color: #303a6b;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    height: 20px;
+
+    h2{
+        transition: all 0.3s ease 0s;
+    }
+
+    li,
+    a,
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            display: inline-block;
+            padding: 0 20px;
+
+            a {
+                display: block;
+                color: #fff;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                transition: all 0.3s ease 0s;
+                
+            }
+        }
+    }
 }
 
-nav ul {
-    list-style-type: none;
+li a:hover, h2:hover{
+    color: black;
 }
 
-ul {
-    color: white;
+section {
+    h1 {
+        margin-top: 85px;
+        margin-left: 5vw;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        font-size: 200px;
+        cursor: default;
+
+        -webkit-transition: all 750ms ease;
+        -moz-transition: all 750ms ease;
+        -o-transition: all 750ms ease;
+        transition: all 750ms ease;
+
+    }
+
+    h1:hover {
+        letter-spacing: 5px;
+        // color: $basecolor1;
+    }
+
+    p {
+        margin-left: 6vw;
+        font-size: 25px;
+        font-family: "Montserrat", sans-serif;
+
+    }
+
+    .big-square {
+        width: 300px;
+        height: 300px;
+        background-color: $basecolor2;
+        border-radius: 50px;
+        transform: rotate(22deg);
+        // animation: test 25s ease 0s infinite;
+
+        position: absolute;
+        top: 220px;
+        right: -150px;
+
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        transition: all 1s ease 0s;
+    }
+
+    .small-square {
+        width: 200px;
+        height: 200px;
+        background-color: $basecolor2;
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        animation: test2 2s;
+
+        position: absolute;
+        top: 600px;
+        right: -50px;
+
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        transition: all 0.5s ease 0s;
+    }
+
+    .circle{
+        width: 500px;
+        height: 500px;
+        background-color: $basecolor2;
+        border-radius: 50%;
+        animation: test3 1s;
+
+        position: absolute;
+        bottom: -250px;
+        left: -250px;
+
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        transition: all 1s ease 0s;
+    }
+
 }
+
+.big-square:hover{
+    transform: rotate(0deg);
+}
+
+.small-square:hover {
+    right: -25px;
+}
+
+.circle:hover{
+    left: -225px;
+    bottom: -225px;
+    border-radius: 40%;
+}
+
+// .big-square,
+// .small-square {
+//     animation: test 5s infinite;
+// }
+
+// @keyframes test {
+//     50% {
+//         right: -10px;
+
+//     }
+// }
+
+ @keyframes test {
+   50%{
+        transform: rotate(150deg);
+    }
+    100%{
+        transform: rotate(0deg);
+
+    }
+ }
+
+ @keyframes test2{
+     50%{
+         width: 1000px;
+         height: 100px;
+     }
+     100%{
+         width: 200px;
+     }
+ }
+
+ @keyframes test3{
+     50%{
+        border-radius: 10%;
+     }
+ }

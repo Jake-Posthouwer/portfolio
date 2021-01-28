@@ -9,16 +9,43 @@
     <body>
         <div class="container">
             <header>
-                <img src="" alt="Logo">
+                <!-- <img src="" alt="Logo"> -->
+                <h2>Portfolio website</h2>
                 <nav>
                     <ul class="nav-link">
-                        <li>About</li>
-                        <li>Work</li>
-                        <li>Contact!</li>
+                        <li>
+                            <a href="">About</a>
+                        </li>
+                        <li>
+                            <a href="">Work</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
                     </ul>
                 </nav>
             </header>
+
+            <section>
+                <h1>Hi,
+                    <br>
+                    I'm Jake</h1>
+                <p>Junior web developer</p>
+
+                <div class="items__layer layer" data-depth="0.5">
+                    <div class="big-square" data-title="0.5"></div>
+                </div>
+                <div class="small-square"></div>
+                <div class="triangle"></div>
+                <div class="circle"></div>
+            </section>
         </div>
 
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        <script>
+            var scene = document.getElementById('js-scene');
+            var parallax = new Parallax(scene);
+        </script>
     </body>
 </html>
