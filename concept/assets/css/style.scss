@@ -1,14 +1,49 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
 
-$basecolor1: #bdc3c7;
-$basecolor2: #ecf0f1;
+// $basecolor1: #ADACB5;
+// $basecolor2: #D8D5DB;
+
+$basecolor2: #4b6584;
+$basecolor1: #778ca3;
+
+@mixin shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 
 body {
     margin: 0;
     padding: 0;
     background-color: $basecolor1;
+    // background: rgb(189, 195, 199);
+    // background: linear-gradient(120deg, rgba(189, 195, 199, 1) 0%, rgba(52, 73, 94, 1) 100%);
     font-family: sans-serif;
     overflow-x: hidden;
+}
+
+.small-square,
+.big-square,
+.circle {
+    @include shadow;
+}
+
+@mixin p-title {
+    font-size: 2vw;
+    // font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+}
+
+h2,
+p {
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
 }
 
 header {
@@ -17,6 +52,7 @@ header {
     align-items: center;
     padding: 30px 10%;
     height: 20px;
+    font-family: "Montserrat", sans-serif;
 
     h2 {
         transition: all 0.3s ease 0s;
@@ -25,7 +61,6 @@ header {
     li,
     a,
     h2 {
-        font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 16px;
         color: #fff;
@@ -43,6 +78,16 @@ header {
             display: inline-block;
             padding: 0 20px;
 
+            button {
+                background: none;
+                color: inherit;
+                border: none;
+                padding: 0;
+                font: inherit;
+                cursor: pointer;
+                outline: inherit;
+            }
+
             a {
                 display: block;
                 color: #fff;
@@ -56,19 +101,18 @@ header {
     }
 }
 
-li a:hover,
-h2:hover {
-    color: black;
-}
+.section1 {
+    height: 100vh;
 
-section {
     h1 {
-        margin-top: 85px;
+        margin-top: 10vh;
         margin-left: 5vw;
         margin-bottom: 0;
         text-transform: uppercase;
-        font-size: 200px;
+        // font-size: 200px;
+        font-size: 15vw;
         cursor: default;
+        line-height: 95%;
 
         -webkit-transition: all 750ms ease;
         -moz-transition: all 750ms ease;
@@ -77,54 +121,41 @@ section {
 
     }
 
-    // h1:hover {
-    //     letter-spacing: 5px;
-    //     // color: $basecolor1;
-    // }
-
     p {
         margin-left: 6vw;
-        font-size: 25px;
-        font-family: "Montserrat", sans-serif;
+        @include p-title;
 
+        .span1 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 1vw;
+        }
     }
 
     .big-square {
-        width: 300px;
-        height: 300px;
+        width: 20vw;
+        height: 250px;
         background-color: $basecolor2;
-        border-radius: 50px;
-        transform: rotate(45deg);
-        // animation: test 2s;
-
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
         position: absolute;
-        top: 220px;
+        top: 25vh;
         right: 0;
-
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
         transition: all 1s ease 0s;
         z-index: -1;
-
     }
 
     .small-square {
-        width: 200px;
+        width: 15vw;
         height: 200px;
         background-color: $basecolor2;
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
-        animation: test2 2s ease 1s;
-
+        animation: test2 1s ease 1s;
         position: absolute;
-        top: 600px;
+        top: 60vh;
         right: 0;
-
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-        transition: all 0.5s ease 0s;
-        z-index: -1;
-
+        transition: all 1s ease 0s;
+        z-index: -2;
     }
 
     .circle {
@@ -132,85 +163,98 @@ section {
         height: 500px;
         background-color: $basecolor2;
         border-radius: 50%;
-        animation: test3 1s;
 
         position: absolute;
         bottom: -250px;
         left: -250px;
 
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
         transition: all 1s ease 0s;
-        z-index: -1;
+        z-index: -3;
     }
 
 }
 
-.big-square:hover {
-    transform: rotate(24deg);
+.section2 {
+    height: 100vh;
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 25px;
+        margin-left: 20%;
+        margin-right: 60%;
+    }
+
+    p {
+        margin-left: 20%;
+        margin-right: 60%;
+        line-height: 150%;
+    }
+
+    img {
+        width: 25%;
+        // margin-left: 20%;
+        margin-right: 20%;
+        border-radius: 10px;
+        float: right;
+        @include shadow;
+    }
+
+    ul {
+        list-style-type: none;
+        margin-left: 20%;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            display: inline-block;
+            padding: 0 10px;
+            padding-left: 0;
+
+            a {
+                color: #000;
+                text-decoration: none;
+                transition: all 0.3s ease 0s;
+
+            }
+        }
+    }
 }
 
-.small-square:hover {
-    right: -25px;
+.section3 {
+    background-color: grey;
+    height: 100vh;
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 25px;
+    }
 }
+
+
+
+
+
+li a:hover,
+h2:hover {
+    color: #000;
+}
+
+// .big-square:hover {
+//     width: 22vw;
+// }
+
+// .small-square:hover {
+//     width: 20vw;
+// }
 
 .circle:hover {
-    // left: -225px;
-    // bottom: -225px;
     border-radius: 40%;
 }
 
-// .big-square,
-// .small-square {
-//     animation: test 5s infinite;
-// }
 
-// @keyframes test {
-//     50% {
-//         right: -10px;
+// @media only screen and (max-width: 1024px) and (min-width: 700px) {
 
+//     body{
+//         display: inline-block;
 //     }
 // }
-
-// @keyframes test {
-//     50% {
-//         transform: rotate(150deg);
-//     }
-
-//     100% {
-//         transform: rotate(0deg);
-
-//     }
-// }
-
-@keyframes test2 {
-    0%{
-        width: 80vw;
-        height: 200px;
-    }
-    50% {
-        width: 0px;
-        height: 0px;
-    }
-
-    55%{
-        height: 200px;
-    }
-
-    100% {
-        width: 200px;
-        height: 200px;
-    }
-}
-
-// @keyframes test3 {
-//     50% {
-//         border-radius: 10%;
-//     }
-// }
-
-
-.span1{
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-}
