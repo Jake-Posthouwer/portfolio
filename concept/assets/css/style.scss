@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
 
-// $basecolor1: #ADACB5;
-// $basecolor2: #D8D5DB;
-
 $basecolor1: #778ca3;
 $basecolor2: #4b6584;
 $basecolor3: rgba(39, 60, 117, 1) 100%;
@@ -30,7 +27,6 @@ body {
 
 @mixin p-title {
     font-size: 2vw;
-    // font-size: 25px;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -107,6 +103,7 @@ header {
     }
 }
 
+// home page
 .section1 {
     height: 100vh;
 
@@ -177,6 +174,7 @@ header {
 
 }
 
+// about page
 .section2 {
     height: 100vh;
 
@@ -217,16 +215,27 @@ header {
                 color: #000;
                 text-decoration: none;
                 transition: all 0.3s ease 0s;
-
             }
         }
+    }
+
+    a {
+        margin-left: 20%;
+        text-decoration: none;
+        color: white;
+        transition: all 0.3s ease 0s;
     }
 
     li a:hover {
         color: #fff;
     }
+
+    a:hover{
+        color: #000;
+    }
 }
 
+// work page
 .section3 {
     height: 100vh;
     margin-left: 10%;
@@ -316,6 +325,7 @@ header {
     }
 }
 
+// contact page
 .section4 {
     height: 100vh;
 
@@ -325,7 +335,7 @@ header {
     }
 }
 
-footer{
+footer {
     width: 100vw;
     height: 75px;
     text-align: center;
@@ -335,29 +345,7 @@ footer{
     color: white;
 }
 
-
-
-
 li a:hover,
 h2:hover {
     color: #000;
 }
-
-// .big-square:hover {
-//     width: 22vw;
-// }
-
-// .small-square:hover {
-//     width: 20vw;
-// }
-
-.circle:hover {
-    border-radius: 40%;
-}
-
-// @media only screen and (min-width: 700px) and (max-width: 1385px) {
-
-//     .projects {
-//         float: clear;
-//     }
-// }
