@@ -18,9 +18,10 @@ php artisan serve
 
 Add /werken or /werken/create behind the link.
 
+---
 
 
-# # Planning,
+# Planning,
 
 * Date | Work | Time
 ---
@@ -29,4 +30,7 @@ Add /werken or /werken/create behind the link.
 * 06-01-2021 | Created a few experiments & designed a new concept | 11:00 - 13:00
 * 13-01-2021 | Final design concept & started working on my portfolio | 11:00 - 13:00
 * 20-01-2021 | Continued on my portfolio concept | 11:00 - 13:00
-* 27-01-2021 | Finished my
+* 27-01-2021 | Redesigned my home page | 11:00 - 13:00
+* 02-02-2021 | Continued home page development | 11:00 - 13:00
+* 04-02-2021 | Developed 'about me' page & started on 'work' page | 16:00 - 17:00
+* 05-02-2021 | Finished 'work' page, developed contact page & finihed concept portfolio | 09:00 - 12:00 & 14:00 - 17:00
