@@ -3,6 +3,7 @@
 
 modern web-portfolio
 
+
 Welcome to my portfolio website,
 
 This portfolio consists of HTML, SCSS, JQuery, PHP / Laravel.
@@ -16,3 +17,12 @@ php artisan serve
 ```
 
 Add /werken or /werken/create behind the link.
+
+
+
+# # Planning,
+
+* Date | Work | Time
+
+* 09-12-2020 | Created repository and looked for inspiration | 11:00 - 13:00
+* 20-01-2021 | Created a few concept designs | 11:00 - 13:00
