@@ -1,4 +1,6 @@
 # Portfolio
+[Portfolio website](http://u533301.gluweb.nl/portfolio/)
+
 modern web-portfolio
 
 Welcome to my portfolio website,
@@ -9,6 +11,8 @@ Using PHP / Laravel I have created a backend interface which can be used to add 
 
 Open a terminal and add the following code to start the server:
 
-* php artisan serve
+```bash
+php artisan serve
+```
 
 Add /werken or /werken/create behind the link.
