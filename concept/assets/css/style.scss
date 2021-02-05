@@ -15,7 +15,6 @@ $basecolor4: rgb(255, 255, 255, 0.1);
 body {
     margin: 0;
     padding: 0;
-    // background-color: $basecolor1;
     background: rgb(119, 140, 163);
     background: linear-gradient(120deg, rgba(119, 140, 163, 1) 0%, rgba(39, 60, 117, 1) 100%);
     font-family: sans-serif;
@@ -35,10 +34,13 @@ body {
     font-family: "Montserrat", sans-serif;
 }
 
+h2 {
+    color: #fff;
+}
+
 h2,
 p {
     font-family: "Montserrat", sans-serif;
-
 }
 
 .wrap {
@@ -46,7 +48,6 @@ p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    // border-radius: 100px;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -114,7 +115,6 @@ header {
         margin-left: 10vw;
         margin-bottom: 0;
         text-transform: uppercase;
-        // font-size: 200px;
         font-size: 10vw;
         cursor: default;
         line-height: 95%;
@@ -178,7 +178,6 @@ header {
 }
 
 .section2 {
-    // margin-top: -25%;
     height: 100vh;
 
     h2 {
@@ -197,7 +196,6 @@ header {
     img {
         width: 25%;
         height: 100%;
-        // margin-left: 20%;
         margin-right: 20%;
         border-radius: 10px;
         float: right;
@@ -230,7 +228,6 @@ header {
 }
 
 .section3 {
-    // background-color: grey;
     height: 100vh;
     margin-left: 10%;
     margin-right: 10%;
@@ -245,8 +242,7 @@ header {
     h2 {
         text-transform: uppercase;
         font-size: 25px;
-        margin-left: 20%;
-        margin-right: 60%;
+        text-align: center;
     }
 
     .projects {
@@ -256,17 +252,14 @@ header {
         border-radius: 20px;
         display: inline-block;
         margin-top: 5%;
-        // margin-right: 5%;
-        // margin-left: 5%;
         margin-bottom: 5%;
         @include shadow;
 
         img {
-            margin: auto;
-            width: 100%;
+            margin: 0 auto;
+            width: 95%;
             border-radius: 20px;
             display: block;
-            margin: auto;
         }
 
         h3 {
@@ -274,6 +267,7 @@ header {
             font-weight: normal;
             text-transform: uppercase;
             text-align: center;
+            color: #fff;
         }
 
         P {
@@ -281,10 +275,19 @@ header {
             margin-right: 10%;
             margin-left: 10%;
             line-height: 150%;
+
+            a {
+                color: #fff;
+            }
+        }
+
+        a:hover {
+            color: #000;
         }
     }
 
     button {
+        margin-top: 5%;
         background-color: $basecolor4;
         border: none;
         padding: 15px 32px;
@@ -295,22 +298,42 @@ header {
         margin: 4px 2px;
         border-radius: 50px;
         cursor: pointer;
+        display: block;
+        margin: 0 auto;
 
-        a{
+        a {
             text-decoration: none;
-            color: white;
-
+            color: #fff;
         }
     }
 
-    button:hover{
+    button:hover {
         background-color: $basecolor1;
-        a{
+
+        a {
             color: black;
         }
     }
 }
 
+.section4 {
+    height: 100vh;
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+}
+
+footer{
+    width: 100vw;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    background-color: $basecolor4;
+
+    color: white;
+}
 
 
 
@@ -332,9 +355,9 @@ h2:hover {
     border-radius: 40%;
 }
 
-// @media only screen and (max-width: 1024px) and (min-width: 700px) {
+// @media only screen and (min-width: 700px) and (max-width: 1385px) {
 
-//     body{
-//         display: inline-block;
+//     .projects {
+//         float: clear;
 //     }
 // }
