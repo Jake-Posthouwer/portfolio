@@ -33,9 +33,7 @@
         </header>
 
         <section class="section1">
-            <h1>Hi,
-                <br>
-                I'm Jake</h1>
+            <h1>Hi, I'm Jake</h1>
             <p class="p-title">Junior Front-end & Backend developer
                 <br>
                 <span class="span1">Located in the Netherlands</span></p>
@@ -90,10 +88,37 @@
             </div>
         </section>
 
-        <section class="section3">
-            <div class="wrap">
+        <!-- <section class="section3">
+            <div class="testt">
                 <h2>Projects</h2>
+                <img src="" alt="">
+                <div class="overlay">
+                    <p>test</p>
+                </div>
+            </div>
+        </section> -->
 
+        <section class="section3">
+            <div class="wrap2">
+                <h2>Projects</h2>
+                <div class="projects">
+                    <img src="assets/img/concept 1.jpg" alt="">
+                    <h3>Project name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate odit voluptas vel, non iusto
+                        porro
+                        recusandae omnis molestias nemo eos autem repellat officiis corporis corrupti veritatis quas cum
+                        tenetur saepe.</p>
+                </div>
+
+                <div class="projects" style="float: right;">
+                    <img src="assets/img/concept 1.jpg" alt="">
+                    <h3>Project name</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate odit voluptas vel, non iusto
+                        porro
+                        recusandae omnis molestias nemo eos autem repellat officiis corporis corrupti veritatis quas cum
+                        tenetur saepe.</p>
+                </div>
+                <button><a href="">More projects</a></button>
             </div>
         </section>
 
@@ -109,7 +134,7 @@
             $('html,body').animate({
                     scrollTop: $(".section2").offset().top
                 },
-                1000, 'swing');
+                800, 'swing');
         });
 
         $(".button2").click(function () {
@@ -128,7 +153,19 @@
     </script>
 
     <script>
-        ScrollReveal().reveal('.section2', { delay: 500 });
+        ScrollReveal().reveal('.section2', {
+            delay: 500
+        });
+        ScrollReveal().reveal('.section3', {
+            delay: 500
+        });
+
+        $('.test').click(function () {
+            var toggleHeight = $(this).height() == 400 ? "400px" : "716px";
+            $(this).animate({
+                height: toggleHeight
+            });
+        });
     </script>
 </body>
 

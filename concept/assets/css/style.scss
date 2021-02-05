@@ -3,8 +3,10 @@
 // $basecolor1: #ADACB5;
 // $basecolor2: #D8D5DB;
 
-$basecolor2: #4b6584;
 $basecolor1: #778ca3;
+$basecolor2: #4b6584;
+$basecolor3: rgba(39, 60, 117, 1) 100%;
+$basecolor4: rgb(255, 255, 255, 0.1);
 
 @mixin shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -13,9 +15,9 @@ $basecolor1: #778ca3;
 body {
     margin: 0;
     padding: 0;
-    background-color: $basecolor1;
-    // background: rgb(189, 195, 199);
-    // background: linear-gradient(120deg, rgba(189, 195, 199, 1) 0%, rgba(52, 73, 94, 1) 100%);
+    // background-color: $basecolor1;
+    background: rgb(119, 140, 163);
+    background: linear-gradient(120deg, rgba(119, 140, 163, 1) 0%, rgba(39, 60, 117, 1) 100%);
     font-family: sans-serif;
     overflow-x: hidden;
 }
@@ -24,6 +26,7 @@ body {
 .big-square,
 .circle {
     @include shadow;
+    background-color: $basecolor3;
 }
 
 @mixin p-title {
@@ -42,8 +45,10 @@ p {
     position: relative;
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
+    // border-radius: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 header {
@@ -105,12 +110,12 @@ header {
     height: 100vh;
 
     h1 {
-        margin-top: 10vh;
-        margin-left: 5vw;
+        margin-top: 20vh;
+        margin-left: 10vw;
         margin-bottom: 0;
         text-transform: uppercase;
         // font-size: 200px;
-        font-size: 15vw;
+        font-size: 10vw;
         cursor: default;
         line-height: 95%;
 
@@ -122,7 +127,7 @@ header {
     }
 
     p {
-        margin-left: 6vw;
+        margin-left: 11vw;
         @include p-title;
 
         .span1 {
@@ -134,9 +139,9 @@ header {
     .big-square {
         width: 20vw;
         height: 250px;
-        background-color: $basecolor2;
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
+        animation: test1 1s ease 0;
         position: absolute;
         top: 25vh;
         right: 0;
@@ -147,10 +152,9 @@ header {
     .small-square {
         width: 15vw;
         height: 200px;
-        background-color: $basecolor2;
         border-top-left-radius: 50px;
         border-bottom-left-radius: 50px;
-        animation: test2 1s ease 1s;
+        animation: test1 1s ease 0;
         position: absolute;
         top: 60vh;
         right: 0;
@@ -161,7 +165,6 @@ header {
     .circle {
         width: 500px;
         height: 500px;
-        background-color: $basecolor2;
         border-radius: 50%;
 
         position: absolute;
@@ -175,6 +178,7 @@ header {
 }
 
 .section2 {
+    // margin-top: -25%;
     height: 100vh;
 
     h2 {
@@ -192,6 +196,7 @@ header {
 
     img {
         width: 25%;
+        height: 100%;
         // margin-left: 20%;
         margin-right: 20%;
         border-radius: 10px;
@@ -218,15 +223,91 @@ header {
             }
         }
     }
+
+    li a:hover {
+        color: #fff;
+    }
 }
 
 .section3 {
-    background-color: grey;
+    // background-color: grey;
     height: 100vh;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    .wrap2 {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
     h2 {
         text-transform: uppercase;
         font-size: 25px;
+        margin-left: 20%;
+        margin-right: 60%;
+    }
+
+    .projects {
+        width: 550px;
+        height: 700px;
+        background-color: $basecolor4;
+        border-radius: 20px;
+        display: inline-block;
+        margin-top: 5%;
+        // margin-right: 5%;
+        // margin-left: 5%;
+        margin-bottom: 5%;
+        @include shadow;
+
+        img {
+            margin: auto;
+            width: 100%;
+            border-radius: 20px;
+            display: block;
+            margin: auto;
+        }
+
+        h3 {
+            margin-top: 15%;
+            font-weight: normal;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        P {
+            margin-top: 5%;
+            margin-right: 10%;
+            margin-left: 10%;
+            line-height: 150%;
+        }
+    }
+
+    button {
+        background-color: $basecolor4;
+        border: none;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        border-radius: 50px;
+        cursor: pointer;
+
+        a{
+            text-decoration: none;
+            color: white;
+
+        }
+    }
+
+    button:hover{
+        background-color: $basecolor1;
+        a{
+            color: black;
+        }
     }
 }
 
@@ -250,7 +331,6 @@ h2:hover {
 .circle:hover {
     border-radius: 40%;
 }
-
 
 // @media only screen and (max-width: 1024px) and (min-width: 700px) {
 
