@@ -23,6 +23,10 @@ Add /werken or /werken/create behind the link.
 # # Planning,
 
 * Date | Work | Time
-
+---
 * 09-12-2020 | Created repository and looked for inspiration | 11:00 - 13:00
-* 20-01-2021 | Created a few concept designs | 11:00 - 13:00
+* 16-12-2020 | Started experimenting for my portfolio | 11:00 - 13:00
+* 06-01-2021 | Created a few experiments & designed a new concept | 11:00 - 13:00
+* 13-01-2021 | Final design concept & started working on my portfolio | 11:00 - 13:00
+* 20-01-2021 | Continued on my portfolio concept | 11:00 - 13:00
+* 27-01-2021 | Finished my
